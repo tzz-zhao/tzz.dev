@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -20,9 +20,8 @@ const { lang, slug } = Astro.params;
 const post = Astro.props;
 const { Content } = await post.render();
 ---
-
 <BaseLayout>
     <h1>{post.data.title}</h1>
     <p>by {post.data.tags}</p>
-<Content/>
+    <Content/>
 </BaseLayout>

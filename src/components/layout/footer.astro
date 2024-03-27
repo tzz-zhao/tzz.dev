@@ -1,0 +1,9 @@
+---
+import { ui } from '@/i18n/ui';
+import { useTranslations } from '@/i18n/utils';
+const locale = Astro.currentLocale as keyof typeof ui;
+const t = useTranslations(locale);
+---
+<footer class="container">
+    <p>{t('footer.build')}</p>
+</footer>
