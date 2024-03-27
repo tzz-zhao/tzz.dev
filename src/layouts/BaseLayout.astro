@@ -1,16 +1,11 @@
 ---
-import { siteConfig } from "@/config/site.config"
+import BaseHeader from '@/components/layout/base-header.astro'
 const locale = Astro.currentLocale
-const siteName = locale && siteConfig.locale && siteConfig.locale[locale]?.name || siteConfig.name;
-const description = locale && siteConfig.locale && siteConfig.locale[locale]?.description || siteConfig.description;
 ---
 <!DOCTYPE html>
 <html lang={ locale }>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content={ description }>
-    <title>{ siteName }</title>
+    <BaseHeader />
 </head>
 <body>
     <slot />

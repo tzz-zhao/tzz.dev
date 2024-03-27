@@ -1,0 +1,18 @@
+---
+import { siteConfig } from "@/config/site.config";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
+const {title,description} = Astro.props;
+const locale = Astro.currentLocale
+const siteName = locale && siteConfig.locale && siteConfig.locale[locale]?.name || siteConfig.name;
+const pageTitle = title? `${title} | ${siteName}` : siteName
+const siteDescription = locale && siteConfig.locale && siteConfig.locale[locale]?.description || siteConfig.description;
+const pageDescription = description? description : siteDescription;
+---
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content={pageTitle}>
+<meta name="description" content={pageDescription}>
+<meta name="generator" content={Astro.generator}>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<title>{ pageTitle }</title>
+<ViewTransitions />
