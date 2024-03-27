@@ -1,8 +1,8 @@
 ---
 import { siteConfig } from "@/config/site.config"
 const locale = Astro.currentLocale
-const siteName = locale && siteConfig.locale && siteConfig.locale[locale].name || siteConfig.name;
-const description = locale && siteConfig.locale && siteConfig.locale[locale].description || siteConfig.description;
+const siteName = locale && siteConfig.locale && siteConfig.locale[locale]?.name || siteConfig.name;
+const description = locale && siteConfig.locale && siteConfig.locale[locale]?.description || siteConfig.description;
 ---
 <!DOCTYPE html>
 <html lang={ locale }>
