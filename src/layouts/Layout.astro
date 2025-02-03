@@ -1,6 +1,8 @@
 ---
 import '@/styles/global.css'
 import Head from '@/components/layouts/head/index.astro'
+import Header from '@/components/layouts/header/index.astro'
+import Footer from '@/components/layouts/footer/index.astro'
 ---
 <!DOCTYPE html>
 <html lang={Astro.currentLocale}>
@@ -8,8 +10,8 @@ import Head from '@/components/layouts/head/index.astro'
 	<Head />
 </head>
 <body class="flex flex-col min-h-screen">
-	<header>Header</header>
+	<Header />
 	<main class="flex flex-1">main</main>
-	<footer>Footer</footer>
+	<Footer />
 </body>
 </html>
