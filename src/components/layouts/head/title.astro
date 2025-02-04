@@ -1,0 +1,6 @@
+---
+import { siteConfig } from "astro.config.mjs";
+const title = Astro.props.title;
+const formatTitle = title ? `${title} | ${siteConfig.siteName}` : siteConfig.siteName;
+---
+<title>{formatTitle}</title>

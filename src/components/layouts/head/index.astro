@@ -1,7 +1,9 @@
 ---
 import Meta from "./meta.astro"
+import Title from '@/components/layouts/head/title.astro'
+const title = Astro.props.title
 ---
 <head>
   <Meta />
-  <title>Document</title>
+  <Title title = {title} />
 </head>
